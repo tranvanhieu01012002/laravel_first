@@ -15,13 +15,22 @@
         <br>
         <br>
         {{-- {{ isset('$car')?"this is form update":"this is form create" }} --}}
-       
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <h1>Chào mừng bạn đến form nhập</h1>
         <h1> {{isset($car)?"this is form update":"this is form create"}}</h1>
         <a href="{{route('cars.index')}}" class="btn btn-success">Về trang chủ</a>
         <br>
-        <form enctype="multipart/form-data" method="POST" action="">
+        <form name="form" enctype="multipart/form-data" method="POST" action="{{isset($car)?route('cars.update',$car->id):route('cars.store')}}" >
             @csrf
+            {{ isset($car)?method_field('PUT'):"" }}
             <div class="form-group">
                 <label for="id">ID</label>
                 {{-- value="{{isset('$car')}}?$car->id:'' " --}}
@@ -49,26 +58,26 @@
                     for="discription">Discription</label>
                 <textarea 
                     class="form-control"  
-                    name="discription" 
+                    name="description" 
                     id="discription" 
-                    rows="3">{{isset($car)?$car->description:"ffff"}}
+                    rows="3">{{isset($car)?$car->description:""}}
                 </textarea>
             </div>
             <div class="form-group">
                 <label for="image">Image</label>
                 <br>
-                <div class="form-group">
-                    <label for="exampleFormControlFile1"> file input</label>
-                    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
-                  </div>
-                <img alt="this is image"  src="/images/{{isset($car)?$car->model:""}}">
+                <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+                <img alt="this is image" id="image-show" class="img-thumbnail" width="400px" height="400px"  src="/images/{{isset($car)?$car->image:""}}">
             </div>
-            <button type="button" class="btn btn-success">Thêm ảnh</button>
+            <button type="submit" class="btn btn-success">Thêm sản phẩm</button>
           </form>
           
     </div>
     <!-- Optional JavaScript -->
+    {{-- access to form --}}
+    <script src="{{asset('js/handle.js')}}"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

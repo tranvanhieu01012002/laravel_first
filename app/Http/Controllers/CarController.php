@@ -33,10 +33,8 @@ class CarController extends Controller
     {
         return [
             'model.required' => 'Vui lòng nhập model',
-            'description.required' => 'Vui lòng nhập description',
-            'number2.numeric' => 'Số dầu tiên không phải là 1 số',
-            'number1.numeric' => 'Số thứ 2 không phải là 1 số',
-            'radio.required' => 'Vui lòng nhập phép tính',
+            'description.required' => 'Vui lòng nhập description', 
+            'image.required'=> 'Vui lòng nhập ảnh vào',
         ];
     }
 
@@ -49,14 +47,38 @@ class CarController extends Controller
     public function store(Request $request)
     {
         //
-        $validate= $request->validate([
-            'model'=>'required',
-            'description'=>'required',
-            'image' => ['required', 'image']
+        // check avariable request
+        // return view('cars.index');
+        $validate = $request->validate([
+            'model' => 'required',
+            'description' => 'required',
+            'image'=>'required',
         ],$this->messages());
-        $image = $request->file('image');
-    }
+        if($request->hasfile('image')){
+            $this->validate($request, 
+			[
+				'image' => 'mimes:jpg,jpeg,png,gif|max:2048',
+			],			
+			[   
+				'image.mimes' => 'Chỉ chấp nhận hình thẻ với đuôi .jpg .jpeg .png .gif',
+				'image.max' => 'Hình thẻ giới hạn dung lượng không quá 2M',
+			]
+		);
+        }
 
+        $file = $request->file('image');
+        $name = time().'_'.$file->getClientOriginalName();
+        $currentPath = public_path('images');
+        $file->move($currentPath,$name);
+   
+        $car = new Car();
+        $car->description = $request->description;
+        $car->model = $request->model;
+        $car->image = $name;
+        $car->save();
+
+        return  redirect()->route('cars.index')->with('success','Bạn đã thêm thành công');
+    }
     /**
      * Display the specified resource.
      *
@@ -96,6 +118,8 @@ class CarController extends Controller
     public function update(Request $request, $id)
     {
         //
+        dd($id);
+        return view('showAll');
     }
 
     /**

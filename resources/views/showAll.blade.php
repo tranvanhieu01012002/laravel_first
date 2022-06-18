@@ -17,6 +17,11 @@
             <br>
             <br>
             <h1>Chào mừng bạn đến cửa hàng</h1>
+            @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
             <a href="{{route('cars.create')}}" type="button" class="btn btn-secondary">thêm xe</a>
             <table class="table table-striped">
                 <thead>
