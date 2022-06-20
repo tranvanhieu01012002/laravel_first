@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Models\Car;
 class CarController extends Controller
@@ -118,8 +118,49 @@ class CarController extends Controller
     public function update(Request $request, $id)
     {
         //
-        dd($id);
-        return view('showAll');
+        
+          //
+        // check avariable request
+        // return view('cars.index');
+        $validate = $request->validate([
+            'model' => 'required',
+            'description' => 'required',
+        ],$this->messages());
+        if($request->hasfile('image')){
+            $this->validate($request, 
+			[
+				'image' => 'mimes:jpg,jpeg,png,gif|max:2048',
+			],			
+			[   
+				'image.mimes' => 'Chỉ chấp nhận hình thẻ với đuôi .jpg .jpeg .png .gif',
+				'image.max' => 'Hình thẻ giới hạn dung lượng không quá 2M',
+			]
+		);
+        }
+
+        // create $car with id from database
+        $car =Car::find($id);
+        $car->description = $request->description;
+        $car->model = $request->model;
+
+        if($request->hasfile('image')){
+            $file = $request->file('image');
+            $name = time().'_'.$file->getClientOriginalName();
+            $currentPath = public_path('images');
+            $file->move($currentPath,$name);
+
+            // just update things we need
+            $imgLink = public_path('images\\').$car->image; 
+            
+            if(File::exists($imgLink)) {
+                File::delete($imgLink);
+            }
+
+            $car->image = $name;
+
+        }
+        $car->save();
+        return redirect()->route('cars.index')->with('success','Bạn đã cập nhật thành công');
     }
 
     /**
@@ -130,6 +171,14 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $car = Car::find($id);
+        $imgLink = public_path('images\\').$car->image; 
+            
+
+        if(File::exists($imgLink)) {
+            File::delete($imgLink);
+        }
+        $car->delete();
+        return  redirect()->route('cars.index')->with('success','Bạn đã xóa thành công');
     }
 }

@@ -66,10 +66,25 @@
             <div class="form-group">
                 <label for="image">Image</label>
                 <br>
-                <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
-                <img alt="this is image" id="image-show" class="img-thumbnail" width="400px" height="400px"  src="/images/{{isset($car)?$car->image:""}}">
+                <input 
+                    type="file" 
+                    name="image" 
+                    class="form-control-file" 
+                    id="exampleFormControlFile1">
+                <img 
+                    alt="this is image" 
+                    id="image-show" 
+                    class="img-thumbnail" 
+                    width="400px" 
+                    height="400px"  
+                    src="/images/{{isset($car)?$car->image:""}}">
             </div>
-            <button type="submit" class="btn btn-success">Thêm sản phẩm</button>
+            <button 
+                type="submit" 
+                class="btn btn-success"
+                >
+                Thêm sản phẩm
+            </button>
           </form>
           
     </div>

@@ -42,14 +42,28 @@
                     <td>{{   $car_index->description}}</td>
                     <td>{{   $car_index->model }}</td>
                     <td><img class="img-thumbnail" src="/images/{{$car_index->image}}"></td>
-                    <td><a href="{{route('cars.edit',$car_index->id)}}" class="btn btn-primary">Edit</a></td>
-                    <td><a  class="btn btn-secondary">delete</a></td>
+                    <td><button onclick="window.location=' {{route('cars.edit',$car_index->id)}}'" class="btn btn-primary">Edit</button></td>
+                    <td>
+                      <form action="{{route('cars.destroy',$car_index->id)}}" method="post">
+                        @csrf
+                        {{ method_field('delete') }}
+                        {{-- <button class="btn btn-secondary" type="submit">Delete</button> --}}
+                        <button class="btn btn-secondary" onclick="return myFunction()">Delete</button>
+                        
+                    </form>
+                    </td>
                   </tr>
                   @endforeach
                 </tbody>
               </table>
         </div>
     <!-- Optional JavaScript -->
+    <script>
+        function myFunction() {
+            if(!confirm("Are You Sure to delete this"))
+            event.preventDefault();
+        }
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
