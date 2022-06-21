@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Car;
 class CarController extends Controller
 {
+    function fileAction($img){
+           // just update things we need
+           $imgLink = public_path('images\\').$img; 
+            
+           if(File::exists($imgLink)) {
+               File::delete($imgLink);
+           }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -149,12 +157,7 @@ class CarController extends Controller
             $currentPath = public_path('images');
             $file->move($currentPath,$name);
 
-            // just update things we need
-            $imgLink = public_path('images\\').$car->image; 
-            
-            if(File::exists($imgLink)) {
-                File::delete($imgLink);
-            }
+            $this->fileAction($car->image);
 
             $car->image = $name;
 
@@ -172,12 +175,9 @@ class CarController extends Controller
     public function destroy($id)
     {
         $car = Car::find($id);
-        $imgLink = public_path('images\\').$car->image; 
-            
 
-        if(File::exists($imgLink)) {
-            File::delete($imgLink);
-        }
+        $this->fileAction($car->image);
+        
         $car->delete();
         return  redirect()->route('cars.index')->with('success','Bạn đã xóa thành công');
     }
