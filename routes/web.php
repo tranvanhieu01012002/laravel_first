@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NotifyMail;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\Ptrinhb1Controller;
 use App\Http\Controllers\NumberCalculate;
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +35,8 @@ Route::get('ptbac1', function () {
     return view('first');
 });
 
+Route::get('contact',[MailController::class,'sendMail'])->name('sendMail');
+// ->name('user');
 
 
 
