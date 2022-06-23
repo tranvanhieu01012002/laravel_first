@@ -23,9 +23,8 @@ class CarFactory extends Factory
         return [
             'description' => $this->faker->paragraph(),
             'model' => $this->faker->name(),
-            'image' => '1.jpg',
-            'updated_at'=> now(),
-            'created_at'=> now()
+            'image' => rand(0,4).'.jpg',
+            'producer_id'=> $this->faker->name()
         ];
     }
 }

@@ -21,12 +21,28 @@ class CarController extends Controller
      */
     public function index()
     {
+
         //
         $cars = Car::all(); //1.b
-        // dd($cars);
-        return view('showAll',['cars'=>$cars]);
+        $pros = \App\Models\Producer::all(); //1.bx`
+        return view('showAll',compact('cars','pros'));
     }
 
+    public function index_producer($id){
+        if($id==-1){
+            $cars = Car::all(); //1.b
+            $pros = \App\Models\Producer::all(); //1.bx`
+            return view('showAll',compact('cars','pros'));
+        }
+        else{
+            $pros = \App\Models\Producer::all();
+            $pro = \App\Models\Producer::findOrFail($id); //1.b
+            // dd($pro);
+            $cars = $pro->cars()->get();
+            return view('showAll',compact('cars','pros'));
+        }
+       
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -35,7 +51,8 @@ class CarController extends Controller
     public function create()
     {
         //
-        return view('Admin/addForm');
+        $pros = \App\Models\Producer::all();
+        return view('Admin/addForm',compact('pros'));
     }
     public function messages()
     {
@@ -82,6 +99,8 @@ class CarController extends Controller
         $car = new Car();
         $car->description = $request->description;
         $car->model = $request->model;
+        $car->producer_id = $request->producer;
+        // $car->producer()->associate(100);
         $car->image = $name;
         $car->save();
 

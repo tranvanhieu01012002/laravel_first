@@ -25,6 +25,13 @@ Route::get('/', function () {
 //management cars store
 
 Route::resource('cars',CarController::class);
+Route::get('cars/producer/{id}',[CarController::class,'index_producer'])->name('cars.index_producer');
+
+
+
+
+// -----------------------------------------------------------
+
 
 
 Route::get('ptbac1',[Ptrinhb1Controller::class, 'index'])->name('ptb1');

@@ -55,6 +55,26 @@
             </div>
             <div class="form-group">
                 <label 
+                    for="producer">Input producer</label>
+                {{-- <input 
+                    type="text"  
+                    name="producer"  
+                    value="{{isset($car)?$car->pro:""}}" 
+                    class="form-control" 
+                    id="producer" 
+                    placeholder="Example input"> --}}
+                <select name="producer" id="producer">
+                    @isset($pros)
+                        @foreach ($pros as $producer) {
+                            # code...
+                            <option value="{{ $producer->id }}"> {{ $producer->name }}</option>
+                        }
+                        @endforeach
+                    @endisset
+                </select>
+            </div>
+            <div class="form-group">
+                <label 
                     for="discription">Discription</label>
                 <textarea 
                     class="form-control"  

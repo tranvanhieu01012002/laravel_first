@@ -17,30 +17,56 @@
             <br>
             <br>
             <h1>Chào mừng bạn đến cửa hàng</h1>
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
             @if(session()->has('success'))
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
                 </div>
             @endif
-            <a href="{{route('cars.create')}}" type="button" class="btn btn-secondary">thêm xe</a>
+               
+            <div class="d-flex justify-content-between">
+                <a href="{{route('cars.create')}}" type="button" class="btn btn-secondary">thêm xe</a>
+                <select  onchange="changeHandler()" id="select">
+                    {{-- <select  onchange="window.location=' {{route('cars.index_producer',3)}}'"> --}}
+                    <option >Please chose a producer</option>
+                        
+                    <option value="-1">See all the producer</option>
+                    
+                        @foreach ($pros as $producer) {
+                            # code...
+                            <option value="{{ $producer->id }}"> {{ $producer->name }}</option>
+                        }
+                        @endforeach
+                        
+                </select>
+            </div>
             <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Description</th>
                     <th scope="col">model</th>
+                    <th scope="col">Producer</th>
                     <th scope="col">Image</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
-                 
                   @foreach ($cars as $car_index)
                   <tr>
                     <th scope="row">{{  $car_index->id }}</th>
                     <td>{{   $car_index->description}}</td>
                     <td>{{   $car_index->model }}</td>
+                    <td>{{   $pros[$car_index->producer_id - 1]->name }}</td>
                     <td><img class="img-thumbnail" src="/images/{{$car_index->image}}"></td>
                     <td><button onclick="window.location=' {{route('cars.edit',$car_index->id)}}'" class="btn btn-primary">Edit</button></td>
                     <td>
@@ -62,6 +88,10 @@
         function myFunction() {
             if(!confirm("Are You Sure to delete this"))
             event.preventDefault();
+        }
+        const changeHandler = ()=>{
+            const index = $('#select').val();
+            window.location= `/cars/producer/${index}`
         }
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
