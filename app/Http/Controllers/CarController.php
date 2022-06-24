@@ -24,8 +24,7 @@ class CarController extends Controller
 
         //
         $cars = Car::all(); //1.b
-        $pros = \App\Models\Producer::all(); //1.bx`
-        return view('showAll',compact('cars','pros'));
+        return view('showAll',compact('cars'));
     }
 
     public function index_producer($id){
@@ -131,8 +130,9 @@ class CarController extends Controller
     public function edit($id)
     {
         //
+        $pros = \App\Models\Producer::all();
         $car = Car::find($id); //1.b
-        return view('Admin/addForm',compact('car'));
+        return view('Admin/addForm',compact('car','pros'));
     }
 
     /**
@@ -169,6 +169,7 @@ class CarController extends Controller
         $car =Car::find($id);
         $car->description = $request->description;
         $car->model = $request->model;
+        $car->producer_id = $request->producer;
 
         if($request->hasfile('image')){
             $file = $request->file('image');

@@ -36,13 +36,13 @@
                 <a href="{{route('cars.create')}}" type="button" class="btn btn-secondary">thêm xe</a>
                 <select  onchange="changeHandler()" id="select">
                     {{-- <select  onchange="window.location=' {{route('cars.index_producer',3)}}'"> --}}
-                    <option >Please chose a producer</option>
+                    <option >Xem danh sách xe của nhà xe</option>
                         
                     <option value="-1">See all the producer</option>
                     
-                        @foreach ($pros as $producer) {
+                        @foreach ($cars as $car) {
                             # code...
-                            <option value="{{ $producer->id }}"> {{ $producer->name }}</option>
+                            <option value="{{$car->producer->id }}"> {{ $car->producer->name }}</option>
                         }
                         @endforeach
                         
@@ -66,7 +66,7 @@
                     <th scope="row">{{  $car_index->id }}</th>
                     <td>{{   $car_index->description}}</td>
                     <td>{{   $car_index->model }}</td>
-                    <td>{{   $pros[$car_index->producer_id - 1]->name }}</td>
+                    <td>{{   $car_index ->producer->name }}</td>
                     <td><img class="img-thumbnail" src="/images/{{$car_index->image}}"></td>
                     <td><button onclick="window.location=' {{route('cars.edit',$car_index->id)}}'" class="btn btn-primary">Edit</button></td>
                     <td>
@@ -74,8 +74,7 @@
                         @csrf
                         {{ method_field('delete') }}
                         {{-- <button class="btn btn-secondary" type="submit">Delete</button> --}}
-                        <button class="btn btn-secondary" onclick="return myFunction()">Delete</button>
-                        
+                        <button class="btn btn-secondary" onclick="return myFunction()">Delete</button>      
                     </form>
                     </td>
                   </tr>

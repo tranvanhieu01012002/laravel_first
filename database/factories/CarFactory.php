@@ -22,9 +22,10 @@ class CarFactory extends Factory
         // $faker = Faker\Factory::create();
         return [
             'description' => $this->faker->paragraph(),
+            'producer_id' =>rand(1,10),
             'model' => $this->faker->name(),
             'image' => rand(0,4).'.jpg',
-            'producer_id'=> $this->faker->name()
+            // 'producer_id'=> $this->faker->name()
         ];
     }
 }

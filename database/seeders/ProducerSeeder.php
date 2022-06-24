@@ -16,9 +16,11 @@ class ProducerSeeder extends Seeder
     public function run()
     {
         //
-        for ($i=0; $i < 4; $i++) { 
-            $pr =  Producer::factory()->create();
-            Car::factory()->for($pr)->count(6)->create();
-        }
+        // for ($i=0; $i < 4; $i++) { 
+        //     $pr = 
+        //     Car::factory()->for($pr)->count(6)->create();
+        // }
+        Producer::factory()->count(10)->create();
+        // C::factory()->count(10)->create();
     }
 }

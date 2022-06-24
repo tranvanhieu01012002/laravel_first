@@ -66,8 +66,9 @@
                 <select name="producer" id="producer">
                     @isset($pros)
                         @foreach ($pros as $producer) {
-                            # code...
-                            <option value="{{ $producer->id }}"> {{ $producer->name }}</option>
+                            <option 
+                            {{isset($car) && $car->producer_id ===  $producer->id ? 'selected':"" }}
+                             value="{{ $producer->id }}"> {{ $producer->name }}</option>
                         }
                         @endforeach
                     @endisset

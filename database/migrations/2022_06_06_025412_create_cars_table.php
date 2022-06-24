@@ -14,11 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cars', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('description');
             $table->string('model');
-            $table->string('producer_id');
+            $table->unsignedInteger('producer_id');
             $table->string('image');
+            $table->foreign('producer_id')->references('id')->on('producers')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
