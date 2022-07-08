@@ -35,13 +35,19 @@ Route::get('producer',[ProducerController::class,'index']);
 //        ;
 // });
 // Route::apiResource('cars', CarAPIController::class)->middleware('cors');
-// Route::apiResource('cars', CarAPIController::class);
+Route::apiResource('cars', CarAPIController::class);
 
 
-Route::middleware(['cors'])->group(function () {
-    Route::post('cars', [CarAPIController::class, 'store']);
-    Route::get('cars', [CarAPIController::class, 'index']);
-});
-
+// Route::middleware(['cors'])->group(function () {
+//     Route::post('cars', [CarAPIController::class, 'store']);
+//     Route::get('cars', [CarAPIController::class, 'index']);
+// });
+// Route::group([
+//     'middleware' => 'api'
+// ], function () {
+   
+// });
+// Route::get('cars', [CarAPIController::class, 'index']);
+// Route::post('cars', [CarAPIController::class, 'store']);
 
 // Route::post('cars', [CarAPIController::class, 'store']);
