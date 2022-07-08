@@ -78,6 +78,7 @@ class CarController extends Controller
             'description' => 'required',
             'image'=>'required',
         ],$this->messages());
+        
         if($request->hasfile('image')){
             $this->validate($request, 
 			[
@@ -144,9 +145,7 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        
-          //
+
         // check avariable request
         // return view('cars.index');
         $validate = $request->validate([
