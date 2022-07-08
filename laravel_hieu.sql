@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 24, 2022 at 06:39 AM
+-- Host: localhost
+-- Generation Time: Jul 08, 2022 at 05:08 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,29 +40,28 @@ CREATE TABLE `cars` (
 --
 
 INSERT INTO `cars` (`id`, `description`, `model`, `producer_id`, `image`) VALUES
-(1, 'select Nolan', 'Rahsaan Heidenreich', 1, '3.jpg'),
-(2, 'Quos excepturi error molestiae rerum a sint sint. Quod dolorum fuga architecto. Ut odit quibusdam repellat natus qui soluta ut.', 'Kamron Purdy', 6, '1.jpg'),
-(3, 'Odit inventore et error sequi perspiciatis impedit. Ex eum earum id et iusto. Optio quia blanditiis deserunt quo consequatur corporis omnis.', 'Broderick Eichmann', 5, '1.jpg'),
-(4, 'Qui pariatur fuga animi sed eum. Magni eius est dolorem architecto ipsum aut et. Quaerat rerum minima amet ut maiores sit aut possimus.', 'Jordon Rodriguez', 3, '3.jpg'),
-(5, 'Deleniti rerum mollitia labore consequatur delectus. Molestiae eum nobis consequatur hic recusandae dolore. Voluptatem inventore quo blanditiis consequatur fugit. Quod tempore quidem sequi ipsam dolorem dolorem et.', 'Ms. Elsa McCullough PhD', 9, '4.jpg'),
-(6, 'Magnam eum commodi molestiae quisquam ipsa repellendus. Mollitia id autem voluptatem accusantium est quibusdam officiis. Modi et blanditiis omnis at beatae qui. Quo in sint qui.', 'Kaia Brekke Jr.', 7, '3.jpg'),
-(7, 'Et id explicabo ex temporibus ut. Aut vitae quo minus vel. Corporis qui est aliquid repellat.', 'Ms. Natalia Wehner I', 4, '3.jpg'),
-(8, 'Incidunt rerum consequuntur impedit voluptatem ut maiores. Accusamus aperiam omnis aut accusamus sint ab. Non debitis assumenda enim incidunt molestias aut. Quibusdam minus ut ipsum et.', 'Gustave Rogahn', 3, '4.jpg'),
-(9, 'Ipsam harum ut sed necessitatibus est ea. Aut ratione reprehenderit sapiente architecto consequatur. Neque et et nesciunt magni. Laudantium unde laborum id non et fugit distinctio.', 'Miss Kristy Dickinson DVM', 5, '2.jpg'),
-(10, 'In ut rerum et minus non consequatur. Nihil illo eos blanditiis quaerat dolores nemo sit. Dolorum itaque eaque est cum voluptatem impedit dolorem.', 'Loyal Koelpin', 10, '1656043048_anh-gai-xinh-1.jpg'),
-(11, 'Repellat et consequatur reprehenderit. Et dolorem eaque cumque eum est praesentium. Unde corporis rerum quia tempore. Voluptatibus rem officia aliquam et aperiam repellendus voluptatem.', 'Prof. Walker Christiansen II', 3, '3.jpg'),
-(12, 'Distinctio ipsam dolor tempore distinctio sit eum. Repellat suscipit sit architecto occaecati aspernatur laudantium recusandae. Quia a possimus repellat voluptatem ipsam vitae voluptas officiis. Sequi error aliquam omnis voluptas rerum.', 'Prof. Paris Rau', 5, '1.jpg'),
-(13, 'Fugiat aliquid voluptas aut praesentium sint est est aspernatur. Nihil temporibus et eos qui. Commodi cumque saepe hic quos.', 'Prof. Brannon Keebler Sr.', 1, '0.jpg'),
-(14, 'Nihil id consequatur quam minus incidunt vel ab. Sint ipsum debitis earum repellendus perferendis nihil. Doloribus et eveniet qui aut modi laboriosam hic. Quis quia dignissimos incidunt sed qui labore.', 'Dr. Pattie Reynolds', 8, '4.jpg'),
-(15, 'Est excepturi voluptas quibusdam. Fugiat eos commodi hic facilis. Totam temporibus voluptatem dolorem ut iste modi repellat delectus.', 'Destiney Nolan', 7, '4.jpg'),
-(16, 'Est quia quidem a ut quod error suscipit. Facere ut ut neque eveniet. Quasi aut adipisci architecto doloribus similique ullam occaecati.', 'Presley West', 3, '2.jpg'),
-(17, 'Aut incidunt consequuntur ut est consectetur laboriosam. Voluptas aut hic est omnis enim minima architecto. Consequatur quis quas non est voluptatem quas. Deleniti suscipit consequatur quasi error.', 'Julien Parker', 9, '2.jpg'),
-(18, 'Placeat sit suscipit provident aperiam itaque. Quam amet ipsa qui. Voluptas totam sed possimus voluptas magni. Inventore et asperiores qui ipsa.', 'Vern Schinner', 3, '1.jpg'),
-(19, 'Consequatur consequatur perspiciatis ut rerum facere deleniti. Corporis aut officia assumenda qui. Iste et esse nesciunt vel. Consequatur ut labore et est eum omnis reiciendis.', 'Alene D\'Amore DDS', 3, '1.jpg'),
-(20, 'Dolorum ea dignissimos alias atque doloremque ipsa. Et magnam facere dolores accusantium aspernatur sed. Eum autem nemo debitis aut odit.', 'Donnell Borer', 6, '1.jpg'),
-(21, 'berg', 'fdsfs', 8, '1656041290_download.jpg'),
-(22, 'hôm nay là thứ 5', 'model vippp', 10, '1656044169_download.jpg'),
-(23, 'Murrrrr', 'xe moi ne1', 2, '1656044376_anh-gai-xinh-1.jpg');
+(1, 'Facere fuga et quis doloremque quibusdam numquam. Et est neque ea temporibus. Totam quidem molestiae reiciendis quis.', 'Orval Ankunding', 9, '0.jpg'),
+(2, 'Assumenda voluptas error voluptatum totam expedita libero voluptatem vel. Voluptatem totam similique quo accusantium non eligendi. Excepturi libero maiores exercitationem nesciunt repellat.', 'Ms. Maudie Oberbrunner', 2, '4.jpg'),
+(3, 'Sit fuga non reiciendis architecto aspernatur a accusantium. Veniam temporibus animi officia ut. Sapiente est qui ex quia excepturi tempore.', 'Mr. Carson Schumm', 4, '4.jpg'),
+(4, 'Et deleniti reiciendis necessitatibus dicta blanditiis soluta quas amet. In inventore quae amet corporis. Voluptatibus fuga sed officiis et eum suscipit quo. Dolorem sit repellendus et et deserunt odio.', 'Josefa Murphy', 1, '2.jpg'),
+(5, 'Et ut consectetur consequatur cumque fugiat illum odit. Atque ea impedit voluptates ipsum. Et nostrum distinctio sed voluptatibus quo.', 'Mustafa Reichert III', 7, '4.jpg'),
+(6, 'Eaque ipsum sunt quia molestias minus. In id sunt sunt. Dicta aut omnis voluptas voluptatem non temporibus rem.', 'Yessenia Beahan Jr.', 8, '0.jpg'),
+(7, 'Quo occaecati qui non repellat sit. Autem similique est est perspiciatis. Aperiam et minus voluptates adipisci aut et quos.', 'Hershel Welch', 7, '2.jpg'),
+(8, 'Magni nobis similique culpa natus non accusantium. Et sit alias et sunt animi excepturi. Eaque voluptates nisi doloremque et aut repudiandae et.', 'Emmet Mitchell', 8, '3.jpg'),
+(9, 'Aperiam molestias ut doloribus dignissimos. Optio aperiam esse quis voluptatem. Voluptas autem perspiciatis non ex aut. Temporibus non nulla repellendus mollitia. Est tempore dolores dolore dicta repellat enim aperiam.', 'Dusty Weber PhD', 4, '0.jpg'),
+(10, 'Qui deserunt error doloribus qui et sed. Nobis vero et aut et. Illo dolore non et iusto id iusto. Quidem est iure atque voluptatum ut id quis.', 'Kira Schimmel', 2, '1.jpg'),
+(11, 'Ducimus molestiae a accusamus exercitationem. Pariatur ea dignissimos veritatis ut dolor cupiditate aliquam. Alias quia alias ipsum quod omnis et.', 'Kaden Wiegand', 5, '2.jpg'),
+(12, 'Quia iste velit ad quos nemo dolor qui qui. Beatae debitis expedita aspernatur aspernatur aut. Blanditiis dolor corporis debitis aut doloribus et. Voluptatem ipsum atque repellendus et.', 'Presley Nikolaus', 1, '3.jpg'),
+(13, 'Eligendi aut quis nostrum quis eaque a. Quisquam ullam id quia eligendi veritatis magni accusantium. Soluta autem est aut necessitatibus dolor aperiam et.', 'Trevor Doyle', 5, '3.jpg'),
+(14, 'Inventore officia reprehenderit molestias est officia cumque qui. Sint optio nesciunt voluptate dolor. Vel fuga soluta ut consequuntur.', 'Prof. Jeffery Mraz', 4, '2.jpg'),
+(15, 'Esse facilis officia possimus ut optio. Ipsa voluptas quo ut voluptas fuga facilis. Sequi molestiae libero ut nisi consequatur aut. Similique ex est cupiditate quaerat sed perferendis quae.', 'Ms. Arlene Bailey', 10, '0.jpg'),
+(16, 'Molestiae et ipsum error officia. Laborum aut autem omnis et dolor. Voluptatem perferendis qui et voluptates beatae voluptas dolore.', 'Izabella Osinski', 6, '1.jpg'),
+(17, 'Exercitationem veritatis perspiciatis ut ipsam eos error dolores. Assumenda eius at officiis eos mollitia id. Voluptatem nemo veniam atque consequatur tempora vel ratione. Et laudantium rerum repellendus nihil non.', 'Mr. Khalil Moen', 9, '4.jpg'),
+(18, 'Veniam repellat suscipit iste sed ullam quasi. Ea cum maiores temporibus illo maiores quaerat blanditiis. Dolorum eligendi suscipit nostrum quidem ipsam.', 'Frederick Wyman', 9, '0.jpg'),
+(19, 'Et doloremque dolore nesciunt et perspiciatis vero est. Aut qui inventore et. Ut dolorum excepturi dignissimos et voluptatem quia possimus. Quis reprehenderit blanditiis commodi. Quo non rerum rerum et magni.', 'Dr. Lucie Haag', 7, '0.jpg'),
+(20, 'Laborum ipsum ipsa non deserunt. Et sint dicta voluptatum quis a voluptatum eum. Et et quod itaque perspiciatis voluptas asperiores cum. Laudantium quam accusantium qui et.', 'Meda Koelpin', 2, '2.jpg'),
+(21, '4444444', 'alo alo', 4, '1656486230_bo-anh-girl-xinh-cap-2.jpg'),
+(22, '4444444', 'alo alo', 4, '1656486243_bo-anh-girl-xinh-cap-2.jpg');
 
 -- --------------------------------------------------------
 
@@ -97,13 +96,13 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(6, '2022_06_22_024211_create_posts_table', 1),
-(8, '2022_06_23_100757_create_producers_table', 2),
-(9, '2022_06_06_025412_create_cars_table', 3);
+(19, '1_2022_06_23_100757_create_producers_table', 1),
+(20, '2014_10_12_000000_create_users_table', 1),
+(21, '2014_10_12_100000_create_password_resets_table', 1),
+(22, '2019_08_19_000000_create_failed_jobs_table', 1),
+(23, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(24, '2022_06_06_025412_create_cars_table', 1),
+(25, '2022_06_22_024211_create_posts_table', 1);
 
 -- --------------------------------------------------------
 
@@ -164,20 +163,16 @@ CREATE TABLE `producers` (
 --
 
 INSERT INTO `producers` (`id`, `name`, `description`) VALUES
-(1, 'Nolan, Bergstrom and Barrows', 'Tenetur natus asperiores asperiores voluptatum. Deleniti natus aperiam et velit.'),
-(2, 'Murazik, Borer and Hane', 'Repellat nobis quia nesciunt atque nisi. Consequatur distinctio inventore atque et quia. Excepturi quo eum qui quisquam vel aliquid. Qui enim nihil eos et saepe ab cumque.'),
-(3, 'Mayert-Ondricka', 'Cum commodi quibusdam odit ut rem. Rerum qui sint nulla reiciendis. Illum facilis impedit voluptatem omnis ut blanditiis dolorum. Id consequatur atque atque aspernatur. Esse enim quibusdam aut.'),
-(4, 'Reichert, Ortiz and Cronin', 'Placeat natus in officiis dolore quia quia aut. In ipsa placeat odit perspiciatis est. Architecto voluptatem dolore a et est quae. Fugit non eaque minima.'),
-(5, 'McCullough PLC', 'Aut omnis et sit aut pariatur dignissimos et. Laudantium in eos quia minus animi alias nulla.'),
-(6, 'Rohan and Sons', 'Enim officiis quae dolores laboriosam dolorem qui. Facilis quam quo laudantium iste at. Recusandae praesentium assumenda qui et et modi molestias.'),
-(7, 'McKenzie-Bergstrom', 'Consequatur eligendi tempore totam aut aut amet nobis. Voluptatem nulla enim aut et id. Repudiandae quisquam voluptas necessitatibus vitae quam.'),
-(8, 'Kutch Inc', 'Quod quos a quas voluptatem. Eligendi eos illo quo et eum aperiam. Rerum nesciunt omnis autem id soluta molestias placeat.'),
-(9, 'Hahn, Harris and Goyette', 'Doloribus expedita aperiam repellendus id quibusdam. Voluptatem iusto labore natus modi vel est. Deleniti facere natus incidunt sit hic soluta accusamus exercitationem.'),
-(10, 'Gutmann Group', 'Repudiandae et velit mollitia dolores voluptatum rerum quia. Aut autem suscipit possimus sed sit dolorem. In laudantium aut quasi laboriosam enim cupiditate. Et eos molestiae incidunt eveniet qui dignissimos molestiae.'),
-(11, 'Collier Ltd', 'Ea maiores officiis quos fuga soluta doloremque quisquam. Assumenda voluptatem nobis laboriosam fugiat aliquid. Maiores consequatur quo quia ipsa.'),
-(12, 'Casper-Satterfield', 'Rem nobis nemo earum maxime qui et. Dolores cumque voluptatem pariatur ducimus voluptates sit. Ea maxime possimus adipisci dignissimos. Hic qui repellat possimus aliquam voluptas ut.'),
-(13, 'Stiedemann-Homenick', 'Assumenda hic ut nam at vitae voluptatem. Porro amet est unde est error illo iusto. Similique voluptas repudiandae at sapiente.'),
-(14, 'Bosco, Hayes and Bosco', 'Et laborum deleniti corporis. Cum officia totam voluptate eligendi occaecati. Autem numquam dolorum dolorem ea modi eius et. Sapiente et sequi soluta et exercitationem. Quia id aliquid culpa animi.');
+(1, 'Nolan-Shields', 'Voluptatibus qui neque ea nam. Temporibus quisquam qui eos perferendis. Ut hic ipsam atque et illum quia nisi.'),
+(2, 'Little LLC', 'Dolorum quibusdam qui qui delectus reiciendis. Libero et in explicabo reiciendis eaque. Minus molestias dolores commodi repudiandae quisquam fugiat.'),
+(3, 'Nader and Sons', 'Aut quo est voluptas excepturi. Molestiae quo qui ea qui. Voluptas tempora minima quod hic consequatur. Maxime omnis impedit qui tenetur voluptates consectetur.'),
+(4, 'Leuschke, Balistreri and Larson', 'Quae veniam tempore assumenda excepturi. Perferendis cumque magnam asperiores nam veniam quia temporibus et. Earum blanditiis dolores qui ut eveniet ipsum. Culpa voluptate at voluptates aperiam maiores et provident.'),
+(5, 'Beatty-Gulgowski', 'Amet consequuntur deserunt hic et. Qui ab tempora perspiciatis dolore. Nemo quam dolorem nulla esse asperiores. Quia voluptatum est ab assumenda inventore aut accusantium.'),
+(6, 'Haley Inc', 'Ea numquam quis odit eos id velit. Sint eum magnam ad eos rem voluptas id asperiores. Debitis eos perspiciatis doloremque tempora necessitatibus. Impedit illo quidem illum exercitationem natus animi in.'),
+(7, 'Robel Ltd', 'Similique nulla consectetur doloremque. Molestiae culpa similique ut enim. Eligendi omnis veniam qui mollitia doloribus. Quibusdam id et voluptate est ipsum.'),
+(8, 'Koepp Group', 'Dolorem ipsum consequatur fugiat rerum. At enim sunt vel quisquam velit. Architecto omnis doloremque eos rerum.'),
+(9, 'Beer-Bradtke', 'Inventore modi modi sit minima. Odit molestias est porro molestiae. Iusto in animi quis debitis quibusdam vel. Distinctio corporis quam dicta optio ea quam.'),
+(10, 'Keebler, Cremin and Von', 'Tempore at optio nostrum incidunt repudiandae nesciunt non. Rerum qui fuga sed vero hic occaecati. Beatae assumenda ipsum laudantium est maxime. Reprehenderit cum nobis aliquid molestiae aut ut quae.');
 
 -- --------------------------------------------------------
 
@@ -262,7 +257,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -274,7 +269,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -292,7 +287,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `producers`
 --
 ALTER TABLE `producers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`
